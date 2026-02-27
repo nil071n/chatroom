@@ -1,0 +1,24 @@
+{
+  "name": "chatroom-launcher",
+  "version": "1.0.0",
+  "description": "Desktop launcher for the chatroom",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "dependencies": {
+    "electron": "^28.1.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.chatroom.launcher",
+    "productName": "Chatroom Launcher",
+    "win": {
+      "target": "nsis",
+      "icon": null
+    }
+  }
+}

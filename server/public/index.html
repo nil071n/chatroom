@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHATROOM // TERMINAL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CRT scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- ── Username modal ── -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-box">
+      <pre class="ascii-art">
+ ██████╗██╗  ██╗ █████╗ ████████╗
+██╔════╝██║  ██║██╔══██╗╚══██╔══╝
+██║     ███████║███████║   ██║   
+██║     ██╔══██║██╔══██║   ██║   
+╚██████╗██║  ██║██║  ██║   ██║   
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+      </pre>
+      <p class="login-label">&gt; ENTER USERNAME TO CONNECT</p>
+      <div class="input-row">
+        <span class="prompt">$</span>
+        <input type="text" id="username-input" maxlength="20" autocomplete="off" autofocus placeholder="guest" />
+      </div>
+      <button id="join-btn">[  CONNECT  ]</button>
+      <p id="login-status" class="login-status"></p>
+    </div>
+  </div>
+
+  <!-- ── Chat screen ── -->
+  <div id="chat-screen" class="chat-screen hidden">
+    <!-- Header bar -->
+    <div class="header">
+      <span class="header-title">■ CHATROOM <span class="version">v1.0</span></span>
+      <span id="user-count" class="user-count">0 online</span>
+    </div>
+
+    <!-- Messages -->
+    <div id="messages" class="messages"></div>
+
+    <!-- Input bar -->
+    <div class="input-bar">
+      <span class="prompt" id="chat-prompt">guest $</span>
+      <input type="text" id="message-input" maxlength="500" autocomplete="off" placeholder="type a message..." />
+      <button id="send-btn">SEND</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

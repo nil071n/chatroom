@@ -1,0 +1,6 @@
+{
+  "Alice-PC": { "publicKey": null },
+  "Bob-PC": {
+    "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArV...placeholder...\n-----END PUBLIC KEY-----"
+  }
+}
